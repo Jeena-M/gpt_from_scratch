@@ -1,7 +1,7 @@
 class CharTokenizer:
     def __init__(self, text: str):
         # Get all unique characters in the dataset
-        chars = sorted(list(set(text)))
+        chars = sorted(list(set(text))) 
         self.vocab_size = len(chars)
 
         # Create mappings
