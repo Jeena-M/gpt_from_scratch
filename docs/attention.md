@@ -144,4 +144,3 @@ This single mechanism replaced most previous sequence modeling approaches.
 - Causal masking is essential for autoregressive models
 - Shape preservation enables deep architectures like GPT
 
-Understanding this module means understanding the core of modern LLMs.
