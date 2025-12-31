@@ -29,7 +29,7 @@ class CausalSelfAttention(nn.Module):
         att = q @ k.transpose(-2, -1) / (C ** 0.5)
 
         # Apply causal mask
-        att = att.masked_fill(self.mask[:T, :T] == 0, float('inf'))
+        att = att.masked_fill(self.mask[:T, :T] == 0, -1e9)  # safest for debugging
 
         # Normalize
         att = F.softmax(att, dim = 1)
